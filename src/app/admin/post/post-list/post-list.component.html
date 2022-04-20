@@ -26,6 +26,39 @@
                     </tr>
                   </tbody>
                 </table> -->
+                <table id="example" class="display" style="width:100%">
+                  <thead>
+                      <tr>
+                          <th>ID</th>
+                          <th>Title</th>
+                          <th>DEscriptoin</th>
+                          <th>Author ID</th>
+                          <th>Post date</th>
+                          <th>View</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let post of posts">
+                          <td>{{ post['id'] }}</td>
+                          <td>{{ post['title'] }}</td>
+                          <td>{{ post['description'] }}</td>
+                          <td>{{ post['user_id'] }}</td>
+                          <td>{{ post['created_at'] }}</td>
+                          <td><img [src]="post['imgUrl']" alt="{{ post['imgUrl'] }}" width="100"></td>
+                      </tr>
+                  </tbody>
+                  <tfoot>
+                      <tr>
+                          <th>Name</th>
+                          <th>Position</th>
+                          <th>Office</th>
+                          <th>Age</th>
+                          <th>Start date</th>
+                          <th>Salary</th>
+                      </tr>
+                  </tfoot>
+              </table>
+
               </div>
           </div>
         </div>
